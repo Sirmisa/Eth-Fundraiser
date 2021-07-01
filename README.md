@@ -33,6 +33,11 @@ concept | definition
 
 
 ## Here is the place for the command line instructions
+### Initializing a new project with Truffle boxes
+- Install Truffle React Box
+```
+$ truffle unbox react
+```
 ### The basic environment for the contracts
 - Install Truffle
 ```
