@@ -8,5 +8,20 @@ module.exports = {
     develop: {
       port: 8545
     }
-  }
+  },
+  // Configure your compilers
+  // **Update - Openzepellin contracts need 0.8.0 compiler
+  compilers: {
+    solc: {
+       version: "0.8.0",    // Fetch exact version from solc-bin (default: truffle's version)
+      // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
+      // settings: {          // See the solidity docs for advice about optimization and evmVersion
+      //  optimizer: {
+      //    enabled: false,
+      //    runs: 200
+      //  },
+      //  evmVersion: "byzantium"
+      // }
+    }
+  },
 };
