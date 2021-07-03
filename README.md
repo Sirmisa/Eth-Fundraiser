@@ -20,6 +20,19 @@ ABI (Application Binary Interface) | Describes the functions and events of our c
 Bytecode | The bytecode field contains the result of compiling your contract. This is the code the Ethereum network will execute when our contract has been invoked from a client. They are created after the compilation process and is part of a .json file in the **build/contracts** folder
 Testnets | Testnets are nets where we can try our Eth developments. There are many nets and clients to interact. Hyperledger has Besu
 Web3 Provider | A provider is a component of Web3 that manages how to connect to the Ethereum network.
+memory vs storage | Memory is for not persisting data and Storage is where the variable states are held. Every complex type, i.e. arrays and structs, has an additional annotation, the “data location”, about whether it is stored in memory or in storage.
+Storage | where all the contract state variables reside. Every contract has its own storage and it is persistent between function calls and quite expensive to use.
+Memory | this is used to hold temporary values. It is erased between (external) function calls and is cheaper to use.
+Stack | which is used to hold small local variables. It is almost free to use, but can only hold a limited amount of values.
+address payable | Its an address type that can receive ether and will have the **transfer** and **send** methods available
+concept | definition
+concept | definition
+concept | definition
+concept | definition
+concept | definition
+concept | definition
+concept | definition
+concept | definition
 concept | definition
 
 ## Here is the place for some definitions

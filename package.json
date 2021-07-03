@@ -1,0 +1,7 @@
+{
+    "name": "Fundraiser",
+    "version": "1.0.0",
+    "dependencies": {
+        "openzeppelin-solidity": "^4.2.0"
+    }
+}
