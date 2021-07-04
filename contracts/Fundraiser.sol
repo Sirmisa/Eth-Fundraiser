@@ -23,6 +23,7 @@ contract Fundraiser is Ownable{
     // is marked as indexed. This means that the EVM will make it easier for subscribers
     // to filter the events that may be relevant to them. Up to three parameters can be indexed when defining an event.
     event DonationReceived(address indexed donor, uint256 value);
+    event Withdraw(uint256 amount);
     //The declared state variables wont need a method to access it. It is like a class variable
     string public name;
     string public url;
@@ -115,5 +116,13 @@ contract Fundraiser is Ownable{
 
         return (values, dates);
      }
+
+    //Here we are taking the keyword "this" as the contract instance that we are casting to an address type
+    // and then getting the balance
+    function withdraw() public onlyOwner {
+        uint256 balance = address(this).balance;
+        beneficiary.transfer(balance);
+        emit Withdraw(balance);
+    }
 
 }
