@@ -25,9 +25,9 @@ Storage | where all the contract state variables reside. Every contract has its 
 Memory | this is used to hold temporary values. It is erased between (external) function calls and is cheaper to use.
 Stack | which is used to hold small local variables. It is almost free to use, but can only hold a limited amount of values.
 address payable | Its an address type that can receive ether and will have the **transfer** and **send** methods available
-concept | definition
-concept | definition
-concept | definition
+Structs | Structs in Solidity allow us to define a new type. The type will have properties that can be made up of different types. The structs can be initialized just passing the parameters and they will be asigned in the same order of the assignments. If we dont want to remember what parameter corresponds to what value we can use keywords to map the parameters like struct_member_variable: value_to_pass.
+Mappings | Mappings allow you to associate a key to a value. In Solidity, the key types are restricted to **integers, booleans, addresses, bytes, and strings**. The value types can be anything, including another mapping. Mappings in Solidity are sadly **not enumerable**, meaning that you cannot use a for loop to iterate through the key/value pairs as you would an array.
+SafeMath | Library that can help us with some problems related to Integer Overflow issues. That would be problematic for the contract. https://consensys.github.io/smart-contract-best-practices/known_attacks/#integer-overflow-and-underflow
 concept | definition
 concept | definition
 concept | definition
