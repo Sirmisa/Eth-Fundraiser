@@ -19,6 +19,10 @@ contract Fundraiser is Ownable{
 
     //This mapping will hold an array of donations where address is the key, Donation[] is the array of donations made by the account
     mapping(address => Donation[]) private _donations;
+    // This is an event that will be triggered each time it is called
+    // is marked as indexed. This means that the EVM will make it easier for subscribers
+    // to filter the events that may be relevant to them. Up to three parameters can be indexed when defining an event.
+    event DonationReceived(address indexed donor, uint256 value);
     //The declared state variables wont need a method to access it. It is like a class variable
     string public name;
     string public url;
@@ -84,6 +88,9 @@ contract Fundraiser is Ownable{
         _donations[msg.sender].push(donation);
         totalDonations = totalDonations.add(msg.value);
         donationsCount++;
+
+        //Here we are emiting our event that will be recorded as logs        
+        emit DonationReceived(msg.sender, msg.value);
     }
 
     /**
